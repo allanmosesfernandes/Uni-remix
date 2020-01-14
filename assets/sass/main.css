@@ -1,2 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
+.wrapper {
+  max-width: 1500px;
+  margin: auto !important;
+}
+
+.mouse-box {
+  margin-top: 80px;
+}
+
+.mouse-scroll {
+  display: block;
+  width: 32px;
+  height: 48px;
+  border: 3px solid white;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  overflow: hidden;
+  font-size: 10000px;
+}
+
+.mouse-scroll:after {
+  background-color: #fff;
+  content: '';
+  width: 4px;
+  height: 8px;
+  position: absolute;
+  left: 50%;
+  top: 7px;
+  border-radius: 4px;
+  background-color: white;
+  margin-left: -2px;
+  opacity: 1;
+  transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+  -webkit-transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+  animation: 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s normal none infinite running scrollAnimation;
+  -webkit-animation: 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s normal none infinite scrollAnimation;
+}
+
+@keyframes scrollAnimation {
+  0%, 20% {
+    -webkit-transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+            transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px);
+            transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px);
+  }
+  100% {
+    opacity: 0.01;
+    -webkit-transform: translateY(16px) scaleY(2.5) scaleX(0.5) translateZ(0px);
+            transform: translateY(16px) scaleY(2.5) scaleX(0.5) translateZ(0px);
+  }
+}
+
+@-webkit-keyframes scrollAnimation {
+  0%, 20% {
+    -webkit-transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px);
+  }
+  100% {
+    opacity: 0.01;
+    -webkit-transform: translateY(16px) scaleY(2.5) scaleX(0.5) translateZ(0px);
+  }
+}
+
+@font-face {
+  font-family: Gilroy-ExtraBold;
+  src: url(/assets/fonts/Gilroy-ExtraBold.otf);
+}
+
+@font-face {
+  font-family: Gilroy-Light;
+  src: url(/assets/fonts/Gilroy-Light.otf);
+}
+
+.bold-text, .frt-title, .frt-bold-text {
+  font-family: Gilroy-ExtraBold;
+  font-size: 24px;
+}
+
+.light-text, .frt-subtext {
+  font-family: Gilroy-Light;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 425px) {
+  .bold-text, .frt-title, .frt-bold-text {
+    font-size: 20px;
+  }
+  .light-text, .frt-subtext {
+    font-size: 14px;
+  }
+}
+
+.frt-first-fold {
+  background-color: #000;
+  height: 100%;
+  padding: 100px;
+  height: 80vh;
+}
+
+.frt-title {
+  color: #f8e71c;
+  margin-bottom: 10px;
+}
+
+.frt-bold-text {
+  color: #fff;
+  line-height: 1.5;
+}
+
+.frt-subtext {
+  font-size: 22px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+@media only screen and (max-width: 425px) {
+  .frt-first-fold {
+    padding: 30px;
+  }
+  .frt-title {
+    font-size: 18px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

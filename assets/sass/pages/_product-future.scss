@@ -1,0 +1,48 @@
+@import '../modules/reset';
+@import '../modules/typography';
+
+$yellow : #f8e71c;
+
+.frt-first-fold {
+    background-color: #000;
+    height: 100%;
+    padding: 100px;
+    height: 80vh;
+}
+
+.frt-title {
+    @extend .bold-text;
+    color: $yellow;
+    margin-bottom: 10px;
+}
+
+.frt-bold-text {
+    @extend .bold-text;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.frt-subtext {
+    @extend .light-text;
+    font-size: 22px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+
+///////////Media Queries //////////
+
+//Media Queries for Tablet
+
+
+//Media Queries for Mobiles - 425px and below 
+@media only screen and (max-width: 425px) {
+   .frt-first-fold {
+       padding: 30px;
+   }
+
+   .frt-title {
+    font-size: 18px;
+   }
+
+  }
