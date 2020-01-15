@@ -2,11 +2,12 @@
 @import '../modules/typography';
 
 $yellow : #f8e71c;
+$p-100 : 100px;
 
 .frt-first-fold {
     background-color: #000;
     height: 100%;
-    padding: 100px;
+    padding: $p-100;
     height: 80vh;
 }
 
@@ -29,6 +30,63 @@ $yellow : #f8e71c;
     color: #fff;
 }
 
+.down-arrow {
+    width: 10px;
+    margin: 20px 10px;
+}
+
+//FRT Modules 
+.frt-modules {
+    padding: $p-100;
+
+    .frt-title {
+        color: #000;
+    }
+
+    .module-link.active {
+        color: red !important;
+        background-color: #fff;
+        border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.module-tabs {
+    border-bottom : none !important;
+}
+.card-grid {
+    display: grid;
+    // grid-auto-columns: minmax(300px, auto);
+    // // grid-template-columns: 300px 300px 300px;
+    grid-gap: 100px;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: 250px 250px 250px;
+    grid-row-gap: 100px;
+    grid-column-gap: 200px;
+    grid-auto-flow: column;
+    margin-top: 50px;
+}
+
+.cards {
+    // width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // height: 250px;
+    box-shadow: 0 13px 25px -9px rgba(26, 54, 87, 0.27);
+    position: relative;
+    padding: 20px;
+
+    .card-img {
+        width: 50px;
+        object-fit: contain;
+    }
+
+    .card-text {
+        @extend .light-text;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
 
 ///////////Media Queries //////////
 
@@ -37,12 +95,13 @@ $yellow : #f8e71c;
 
 //Media Queries for Mobiles - 425px and below 
 @media only screen and (max-width: 425px) {
-   .frt-first-fold {
-       padding: 30px;
-   }
+    .frt-first-fold {
+        padding: 30px;
+    }
 
-   .frt-title {
-    font-size: 18px;
-   }
+    .frt-title {
+        font-size: 18px;
+        font-family: Gilroy-Light;
+    }
 
-  }
+}
